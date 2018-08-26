@@ -10,8 +10,8 @@
       <div class="arrow-up"></div>
     </div>
     <div class="input-search">
-      <input type="text" name="hotelSearch" [(ngModel)]="name" (ngModelChange)="nameChanged()" placeholder="Ingrese el nombre del hotel" />
-      <div class="button">Aceptar</div>
+      <input type="text" name="hotelSearch" [(ngModel)]="name" placeholder="Ingrese el nombre del hotel" />
+      <div class="button" (click)="nameChanged()">Aceptar</div>
     </div>
   </div>
   <div class="search-box">
