@@ -13,7 +13,11 @@
             <div class="star-row"><label><div class="star-gold" *ngFor="let arr of getStarArr(hotel.stars)"></div></label></div>
           </div>
           <div class="ammenities-container">
-            <div class="ammenities-row"><label><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div></label></div>
+            <div class="ammenities-row">
+              <label>
+                <div class="ammenities-gray" *ngFor="let amenitie of hotel.amenities" [ngStyle]="{'background-image': getAmenitiesPath(amenitie)}"></div>
+              </label>
+            </div>
           </div>
         </div>
       </div>

@@ -17,4 +17,7 @@ export class ResultsContainerComponent implements OnInit {
     return Array(stars);
   }
 
+  getAmenitiesPath(amenitie){
+    return `url(./assets/icons/amenities/${amenitie}.svg)`;
+  }
 }

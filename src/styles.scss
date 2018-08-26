@@ -9,7 +9,7 @@ body{
 
 
 .stars-container, .ammenities-container{
-    .star-row{
+    .star-row, .ammenities-row{
         font-weight: bold;
         font-size: 0.9em;
         margin-top: 10px;
@@ -23,7 +23,6 @@ body{
             height: 20px;
         }
         .ammenities-gray{
-            background-image: url('./assets/icons/filters/star-gold.svg');
             background-size: 20px 20px;
             width: 20px;
             margin-top: 1px;
