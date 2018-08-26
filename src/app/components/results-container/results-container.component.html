@@ -1,0 +1,29 @@
+<div class="column-right">
+  <div class="hotel-container container-fluid" *ngFor="let hotel of hotels">
+    <div class="row">
+      <div class="col-lg-3">
+        <img src="./../assets/images/hotels/{{hotel.image}}" class="hotel-img">
+      </div>
+      <div class="col-lg-6">
+        <div class="hotel-data-container">
+          <div class="hotel-title">
+            {{hotel.name}}
+          </div>
+          <div class="stars-container">
+            <div class="star-row"><label><div class="star-gold" *ngFor="let arr of getStarArr(hotel.stars)"></div></label></div>
+          </div>
+          <div class="ammenities-container">
+            <div class="ammenities-row"><label><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div></label></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="cost-container">
+          <div class="cost-text">Precio por habitación</div>
+          <div class="cost-amount"><span class="currency">ARS</span><span class="amount">{{hotel.price}}</span></div>
+          <div class="ver-hotel">Ver Hotel</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

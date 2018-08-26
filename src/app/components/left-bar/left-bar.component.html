@@ -1,0 +1,35 @@
+<div class="column-left">
+  <div class="box">
+    <span class="title">Filtros</span>
+  </div>
+  <div class="search-box">
+    <div class="search-box-header">
+      <div class="magnifier">
+      </div>
+      <div class="search-box-text">Nombre del hotel</div>
+      <div class="arrow-up"></div>
+    </div>
+    <div class="input-search">
+      <input type="text" name="hotelSearch" [(ngModel)]="name" (ngModelChange)="nameChanged()" placeholder="Ingrese el nombre del hotel" />
+      <div class="button">Aceptar</div>
+    </div>
+  </div>
+  <div class="search-box">
+      <div class="search-box-header">
+        <div class="star-blue">
+        </div>
+        <div class="search-box-text">Estrellas</div>
+        <div class="arrow-up"></div>
+      </div>
+      <div class="stars-container">
+        <div class="star-row">
+          <label class="text-checkbox"><input type="checkbox" [(ngModel)]="allChecked" (ngModelChange)="allClicked()"><span>Todas las estrellas</span></label>
+        </div>
+        <div class="star-row"><label><input type="checkbox" [(ngModel)]="starFilter.five" (ngModelChange)="allChange()"><span><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div></span></label></div>
+        <div class="star-row"><label><input type="checkbox" [(ngModel)]="starFilter.four" (ngModelChange)="allChange()"><span><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div></span></label></div>
+        <div class="star-row"><label><input type="checkbox" [(ngModel)]="starFilter.three" (ngModelChange)="allChange()"><span><div class="star-gold"></div><div class="star-gold"></div><div class="star-gold"></div></span></label></div>
+        <div class="star-row"><label><input type="checkbox" [(ngModel)]="starFilter.two" (ngModelChange)="allChange()"><span><div class="star-gold"></div><div class="star-gold"></div></span></label></div>
+        <div class="star-row"><label><input type="checkbox" [(ngModel)]="starFilter.one" (ngModelChange)="allChange()"><span><div class="star-gold"></div></span></label></div>
+      </div>
+    </div>
+</div>

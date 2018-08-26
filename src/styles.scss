@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+
+.stars-container, .ammenities-container{
+    .star-row{
+        font-weight: bold;
+        font-size: 0.9em;
+        margin-top: 10px;
+        color: rgb(80, 80, 80);
+        user-select: none;
+        .star-gold{
+            background-image: url('./assets/icons/filters/star-gold.svg');
+            background-size: 20px 20px;
+            width: 20px;
+            margin-top: 1px;
+            height: 20px;
+        }
+        .ammenities-gray{
+            background-image: url('./assets/icons/filters/star-gold.svg');
+            background-size: 20px 20px;
+            width: 20px;
+            margin-top: 1px;
+            height: 20px;
+        }
+        label{
+            cursor: pointer;
+            display: flex;
+            input[type=checkbox]{
+                margin: 5px 10px 0px 10px;
+            }
+            span{
+                display: flex;
+            }
+            &.text-checkbox span{
+                margin-top: 8px;
+            }
+        }
+    }
+}
