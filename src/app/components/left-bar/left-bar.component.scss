@@ -1,6 +1,7 @@
 .column-left{
     %basic-box{
         border-radius: 2px;
+        position: relative;
         border-color: rgb(112, 112, 112) 1px solid;
         padding: 10px;
         line-height: 0.5;
@@ -17,7 +18,58 @@
     padding: 0 0 30px 0;
     .box {
         @extend %basic-box;
+        &.filters-box{
+            @media (min-width: 991.99px) {
+                div.title{
+                    &::before{
+                        content:"Filtros";
+                        font-weight: bold;
+                    }
+                }
+                
+                .arrow-up, .arrow-down{
+                    display: none;
+                }
+            }
+            @media (max-width: 991.98px) {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                div.title{
+                    &::before{
+                        content:"Filtrar"!important;
+                        font-weight: bold;
+                    }
+                    display: inline-flex;
+                    color: #157ab1;
+                }
+                .arrow-down{
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-top: 7px solid #157ab1;
+                    position: relative;
+                    display: inline-flex!important;
+                    width: 15px;
+                    margin: 0 10px;
+                    height: 15px;
+                    user-select: none;
+                }
+                .arrow-up{
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-bottom: 7px solid #157ab1;
+                    position: relative;
+                    display: inline-flex!important;
+                    width: 15px;
+                    margin: 0 0 0 25px;
+                    height: 9px;
+                    user-select: none;
+                }
+    
+            }
+        }
     }
+    
     .search-box{
         @extend %basic-box;
         position: relative;
@@ -29,6 +81,17 @@
             position: absolute;
             right: 15px;
             border-bottom: 7px solid #157ab1;
+            user-select: none;
+        }
+        .arrow-down{
+            width: 0; 
+            height: 0; 
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            position: absolute;
+            right: 15px;
+            border-top: 7px solid #157ab1;
+            user-select: none;
         }
         .search-box-header{
             display: flex;
@@ -75,6 +138,7 @@
                 height: 30px;
                 background-color: #003374;
                 width: 120px;
+                user-select: none;
             }
         }
     }

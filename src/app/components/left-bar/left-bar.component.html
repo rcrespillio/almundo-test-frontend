@@ -1,27 +1,37 @@
 <div class="column-left">
-  <div class="box">
-    <span class="title">Filtros</span>
+  <div class="box filters-box">
+    <div class="title"><div class="arrow-down" [ngClass]="{
+      'arrow-down':visibility.allFiltersHidden,
+      'arrow-up':!visibility.allFiltersHidden
+    }" (click)="toggleFilters()"></div></div>
+    
   </div>
-  <div class="search-box">
+  <div class="search-box" [hidden]="visibility.allFiltersHidden">
     <div class="search-box-header">
       <div class="magnifier">
       </div>
       <div class="search-box-text">Nombre del hotel</div>
-      <div class="arrow-up"></div>
+      <div class="arrow-up" [ngClass]="{
+        'arrow-down':visibility.hotelFilterHidden,
+        'arrow-up':!visibility.hotelFilterHidden
+      }" (click)="toggleHotelFilter()"></div>
     </div>
-    <div class="input-search">
+    <div class="input-search" [hidden]="visibility.hotelFilterHidden">
       <input type="text" name="hotelSearch" [(ngModel)]="name" placeholder="Ingrese el nombre del hotel" />
       <div class="button" (click)="nameChanged()">Aceptar</div>
     </div>
   </div>
-  <div class="search-box">
+  <div class="search-box" [hidden]="visibility.allFiltersHidden">
       <div class="search-box-header">
         <div class="star-blue">
         </div>
         <div class="search-box-text">Estrellas</div>
-        <div class="arrow-up"></div>
+        <div class="arrow-up" [ngClass]="{
+          'arrow-down':visibility.starsFilterHidden,
+          'arrow-up':!visibility.starsFilterHidden
+        }" (click)="toggleStarsFilter()"></div>
       </div>
-      <div class="stars-container">
+      <div class="stars-container" [hidden]="visibility.starsFilterHidden">
         <div class="star-row">
           <label class="text-checkbox"><input type="checkbox" [(ngModel)]="allChecked" (ngModelChange)="allClicked()"><span>Todas las estrellas</span></label>
         </div>
